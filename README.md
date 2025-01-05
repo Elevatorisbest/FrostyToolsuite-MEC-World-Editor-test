@@ -33,7 +33,9 @@ Mirror's Edge Catalyst does not use many of assets that SWBFII and MEA require. 
 ### Boilerplates
 Compilation of the plugin requires a list of entities and their definitions in order to function. A base for this can be exported with an element of the *working* Level Editor plugin...
 
-## 
+## Boilerplates in the Level Editor
+
+Boilerplates are files containing definitions of types and entities used in the game. One file for each entity.
 
 Compiling the level editor seems like an impossibility due to The Boilerplate Conundrum(tm).
 <br>To amend the impossibility of this, you can make a custom plugin containing *only* the Entity Generator tool. I have not included that in the repository yet. The Resulting boilerplates are devoid of any definitions, however. For most entities it's fine, but some require extensions to function.
