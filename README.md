@@ -50,6 +50,13 @@ Lastly, the Editor itself.
 1.0.7 Frosty Editor lacks some functionalities of 1.0.6.3, which is partially alleviated by using [HerGabt's 1.0.7 backport project](https://github.com/HarGabt/FrostyToolsuite/tree/1.0.7_test_locale_from_wavebend)
 
 
+> But what about UI and Widgets?
+
+  MEA version of the plugin has a UI editor. It requires all assets with UI elements to be properly defined and assigned in the UI editor implementation.
+  - MEC has a custom UI system, PamUI
+  - In the current release of this fork, this results in inability to edit UIwidget assets in Schematic View.
+
+
 
 ## Setup
 
