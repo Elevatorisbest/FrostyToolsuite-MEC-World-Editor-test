@@ -18,12 +18,12 @@ The most advanced modding platform for games running on DICE's Frostbite game en
 3. Put [strings.txt](https://drive.google.com/file/d/1jMtY9P0GvUghGK1Y3vwg1RL91s6vwk7x/view) by [zhpete](https://github.com/zhpete) in the main Editor folder
 
 4. After creating your mod, it needs to be ported to 1.0.6.3 Frosty Mod Manager.
-   4.1 This has to be done by hand by exporting all modified assets, bundles and chunks in .BIN format, and importing them into 1.0.6.3 Frosty Editor
-   4.2 If an asset has been added to another bundle, it needs to be manually added back in
-   4.3 If duplicated or new assets have been created, they need to be added again in prefabs using these assets (because of GUID randomization)
+<br>   4.1 This has to be done by hand by exporting all modified assets, bundles and chunks in .BIN format, and importing them into 1.0.6.3 Frosty Editor
+<br>   4.2 If an asset has been added to another bundle, it needs to be manually added back in
+<br>   4.3 If duplicated or new assets have been created, they need to be added again in prefabs using these assets (because of GUID randomization)
 
 Porting process is tedious, however it needs to be done for compatibility with other mods
-  *...and to avoid the "it doesn't work for me/it crashes my game" kind of comment section.*
+<br>  *...and to avoid the "it doesn't work for me/it crashes my game" kind of comment section.*
 
 ## Assets and entities in Frostbite games
 
@@ -36,15 +36,15 @@ Compilation of the plugin requires a list of entities and their definitions in o
 ## 
 
 Compiling the level editor seems like an impossibility due to The Boilerplate Conundrum(tm).
-To amend the impossibility of this, you can make a custom plugin containing *only* the Entity Generator tool. I have not included that in the repository yet.
-Resulting boilerplates are devoid of any definitions, however. For most entities it's fine, but some require extensions to function.
+<br>To amend the impossibility of this, you can make a custom plugin containing *only* the Entity Generator tool. I have not included that in the repository yet. The Resulting boilerplates are devoid of any definitions, however. For most entities it's fine, but some require extensions to function.
 
 It turns out you can cross-reference entities from SWFBII and MEA which *do* contain those definitions. They can be incompatible with MEC, but can be modified to work with it. It is a very tedious process.
 
 But then still, there are conflicts between GameShared assets, and needs to be resolved manually for each error.
-Sometimes, the Level Editor itself is fighting against you, as some functions were not written. I added some of those aswell.
+<br>Sometimes, the Level Editor itself is fighting against you, as some functions were not written. I added some of those aswell.
 
 Lastly, the Editor itself. 
+
 1.0.7 Frosty Editor lacks some functionalities of 1.0.6.3, which is partially alleviated by using [HerGabt's 1.0.7 backport project](https://github.com/HarGabt/FrostyToolsuite/tree/1.0.7_test_locale_from_wavebend)
 
 
