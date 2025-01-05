@@ -1092,9 +1092,18 @@ namespace LevelEditorPlugin.Resources
 
         public string GetPhysicsShapeType(int index)
         {
-            hknpStaticCompoundShape.hknpInstance instance = RootShape.Instances[index];
-            return instance.shape.GetType().Name;
-        }
+            string instanceName = "";
+            try
+            {
+                hknpStaticCompoundShape.hknpInstance instance = RootShape.Instances[index];
+                instanceName = instance.shape.GetType().Name;
+            }
+            catch (Exception e)
+            {
+                instanceName = "none";
+            }
+            return instanceName;
+            }
 
         public override ModifiedResource SaveModifiedResource()
         {
