@@ -883,6 +883,14 @@ namespace LevelEditorPlugin.Screens
 
         private Ray GetHitTestRay(int x, int y)
         {
+            if (camera == null)
+            {
+                camera = new LevelEditorCamera();
+                camera.SetViewParams(new Vector3(0, 0, 0), new Vector3(0, 0, 0));
+
+                SetCamera();
+            }
+
             Matrix viewProj = camera.GetViewProjMatrix();
             Ray ray = Ray.GetPickRay(x, y, new Viewport(0, 0, Viewport.ViewportWidth, Viewport.ViewportHeight, camera.GetNearClip(), camera.GetFarClip()), viewProj);
 

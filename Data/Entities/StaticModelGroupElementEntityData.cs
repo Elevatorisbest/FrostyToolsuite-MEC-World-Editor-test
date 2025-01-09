@@ -23,11 +23,11 @@ namespace LevelEditorPlugin.Data
         public FrostySdk.Ebx.RenderingOverrides RenderingOverrides { get; set; } = new FrostySdk.Ebx.RenderingOverrides();
         public FrostySdk.Ebx.RadiosityTypeOverride RadiosityTypeOverride { get; set; }
         public bool TerrainShaderNodesEnable { get; set; }
-        public FrostySdk.Ebx.CString HavokShapeType { get; set; }
+        //public FrostySdk.Ebx.CString HavokShapeType { get; set; }
 
         [IsHidden]
         public int Index { get; set; }
-        [IsHidden]
-        public bool IsHavok { get; set; }
+        //[IsHidden]
+        //public bool IsHavok { get; set; }
     }
 }

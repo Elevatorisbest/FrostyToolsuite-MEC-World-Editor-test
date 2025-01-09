@@ -160,7 +160,7 @@ namespace LevelEditorPlugin.Entities
                         {
                             entityData.Transform = member.InstanceTransforms[i];
                             entityData.Index = totalInstCount;
-                            entityData.HavokShapeType = "None";
+                            //entityData.HavokShapeType = "None";
                         }
                         else if (physicsData != null)
                         {
@@ -168,8 +168,8 @@ namespace LevelEditorPlugin.Entities
 
                             entityData.Transform = MakeLinearTransform(physicsData.GetTransform(instCount++));
                             entityData.Index = instCount - 1;
-                            entityData.IsHavok = true;
-                            entityData.HavokShapeType = physicsData.GetPhysicsShapeType(instCount - 1);
+                            //entityData.IsHavok = true;
+                            //entityData.HavokShapeType = physicsData.GetPhysicsShapeType(instCount - 1);
                         }
 
                         if (i < member.InstanceObjectVariation.Count)
@@ -222,11 +222,11 @@ namespace LevelEditorPlugin.Entities
 
         public void UpdateData(StaticModelGroupElementEntity entity)
         {
-            if (entity.Data.IsHavok)
-            {
-                physicsData.UpdateData(entity.Data.Index, entity.GetLocalTransform());
-            }
-            else
+            //if (entity.Data.IsHavok)
+            //{
+            //    physicsData.UpdateData(entity.Data.Index, entity.GetLocalTransform());
+            //}
+            //else
             {
                 int instanceIndex = 0;
                 bool ebxNeedsUpdating = false;
@@ -260,11 +260,11 @@ namespace LevelEditorPlugin.Entities
 
         public void UndoData(StaticModelGroupElementEntity entity)
         {
-            if (entity.Data.IsHavok)
-            {
-                physicsData.UndoData(entity.Data.Index, entity.GetLocalTransform());
-            }
-            else
+            //if (entity.Data.IsHavok)
+            //{
+            //    physicsData.UndoData(entity.Data.Index, entity.GetLocalTransform());
+            //}
+            //else
             {
                 int instanceIndex = 0;
                 bool ebxNeedsUpdating = false;
