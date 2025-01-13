@@ -20,4 +20,4 @@ using FrostySdk;
 [assembly: RegisterAssetDefinition("VisualEnvironmentBlueprint", typeof(VisualEnvironmentBlueprintAssetDefinition))]
 
 // other
-[assembly: RegisterAssetDefinition("SubWorldData", typeof(SubWorldDataAssetDefinition))]
+//[assembly: RegisterAssetDefinition("SubWorldData", typeof(SubWorldDataAssetDefinition))]

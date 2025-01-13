@@ -312,12 +312,8 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y $(TargetPath) D:\FrostyToolsuite\FrostyEditor\bin\Developer\Debug\Plugins" />
+    <Exec Command="xcopy /Y &quot;$(TargetPath)&quot; &quot;$(SolutionDir)FrostyEditor\bin\Developer\Debug\Plugins&quot;" />
   </Target>
-  
-  <ItemGroup>
-    <Folder Include="GameSpecific" />
-  </ItemGroup>
   
   <ItemGroup>
     <Page Remove="GameSpecific\starwarsbattlefrontii\**" Condition="'$(Configuration)' != 'SWBF2 - Debug' And '$(Configuration)' != 'SWBF2 - Release'" />

@@ -1,4 +1,5 @@
 ﻿using LevelEditorPlugin.Editors;
+using LevelEditorPlugin.Managers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,17 @@ namespace LevelEditorPlugin.Entities
         public ObjectReferenceObject(FrostySdk.Ebx.ObjectReferenceObjectData inData, Entity inParent)
             : this(inData, inParent, null)
         {
+        }
+
+        //protected override void Initialize()
+        //{
+        //    blueprint = LoadedAssetManager.Instance.LoadAsset<Assets.LogicPrefabBlueprint>(this, Data.Blueprint);
+        //}
+
+        public override void Destroy()
+        {
+            LoadedAssetManager.Instance.UnloadAsset(blueprint);
+            base.Destroy();
         }
     }
 }
